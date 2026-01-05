@@ -28,22 +28,14 @@ class GrokClient(LLMClient):
     """
 
     # Model ID mapping
-    # See: https://docs.x.ai/docs/models
     MODELS = {
-        # Grok-4 series (latest - 2M context for fast models)
-        "grok-4": "grok-4",
-        "grok-4-fast": "grok-4-fast-non-reasoning",
-        "grok-4-fast-reasoning": "grok-4-fast-reasoning",
-        # Grok-3 series (use -beta suffix)
-        "grok-3": "grok-3-beta",
-        "grok-3-fast": "grok-3-fast-beta",
-        "grok-3-mini": "grok-3-mini-beta",
-        "grok-3-mini-fast": "grok-3-mini-fast-beta",
-        # Grok-2 series
-        "grok-2": "grok-2-1212",
-        "grok-2-vision": "grok-2-vision-1212",
-        # Specialized models
-        "grok-code": "grok-code-fast-1",
+        # Expensive reasoning model / Default model
+        "grok": "grok-4-1-fast-reasoning",
+        "grok-4": "grok-4-1-fast-reasoning",
+        "grok-reasoning": "grok-4-1-fast-reasoning",
+        # Inexpensive fast model
+        "grok-fast": "grok-4-1-fast-non-reasoning",
+        "grok-4-fast": "grok-4-1-fast-non-reasoning",
     }
 
     # xAI API base URL

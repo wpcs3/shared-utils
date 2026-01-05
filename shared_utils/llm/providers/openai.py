@@ -22,25 +22,17 @@ class OpenAIClient(LLMClient):
     """
 
     # Model ID mapping
-    # See: https://platform.openai.com/docs/models
     MODELS = {
-        # GPT-4.1 series (April 2025 - 1M context)
-        "gpt-4.1": "gpt-4.1",
-        "gpt-4.1-mini": "gpt-4.1-mini",
-        "gpt-4.1-nano": "gpt-4.1-nano",
-        # O-series reasoning models (latest)
-        "o3": "o3",
-        "o3-mini": "o3-mini",
-        "o3-pro": "o3-pro",
-        "o4-mini": "o4-mini",
-        "o1": "o1",
-        "o1-pro": "o1-pro",
-        # GPT-4o models (legacy but still available)
-        "gpt-4o": "gpt-4o",
-        "gpt-4o-mini": "gpt-4o-mini",
-        # Legacy models
-        "gpt-4-turbo": "gpt-4-turbo",
-        "gpt-4": "gpt-4",
+        # Expensive reasoning model / Default model
+        "gpt-5": "gpt-5.2-2025-12-11",
+        "gpt-5.2": "gpt-5.2-2025-12-11",
+        # Inexpensive fast model
+        "gpt-5-mini": "gpt-5-mini-2025-08-07",
+        # Embeddings
+        "text-embedding-large": "text-embedding-3-large",
+        "text-embedding-small": "text-embedding-3-small",
+        "text-embedding-3-large": "text-embedding-3-large",
+        "text-embedding-3-small": "text-embedding-3-small",
     }
 
     def __init__(

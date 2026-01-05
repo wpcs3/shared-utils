@@ -22,19 +22,16 @@ class GoogleClient(LLMClient):
     """
 
     # Model ID mapping
-    # See: https://ai.google.dev/gemini-api/docs/models
-    # Note: Gemini 1.5 and 1.0 are retired (return 404)
     MODELS = {
-        # Gemini 2.5 series (current stable)
-        "gemini-2.5-pro": "gemini-2.5-pro",
-        "gemini-2.5-flash": "gemini-2.5-flash",
-        "gemini-2.5-flash-lite": "gemini-2.5-flash-lite",
-        # Gemini 2.0 series
-        "gemini-2.0-flash": "gemini-2.0-flash",
-        "gemini-2.0-flash-thinking": "gemini-2.0-flash-thinking-exp",
-        # TTS models
-        "gemini-2.5-flash-tts": "gemini-2.5-flash-tts-preview",
-        "gemini-2.5-pro-tts": "gemini-2.5-pro-tts-preview",
+        # Expensive reasoning model
+        "gemini-pro": "gemini-3-pro-preview",
+        "gemini-3-pro": "gemini-3-pro-preview",
+        # Default model / Inexpensive fast model
+        "gemini-flash": "gemini-3-flash-preview",
+        "gemini-3-flash": "gemini-3-flash-preview",
+        # Image creation
+        "gemini-image": "gemini-3-pro-image",
+        "gemini-3-pro-image": "gemini-3-pro-image",
     }
 
     def __init__(
