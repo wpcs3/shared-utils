@@ -22,16 +22,24 @@ class AnthropicClient(LLMClient):
     """
 
     # Model ID mapping (friendly names -> API IDs)
+    # See: https://docs.anthropic.com/en/docs/about-claude/models/overview
     MODELS = {
-        # Claude 4.5 series
-        "claude-opus-4.5": "claude-opus-4-5-20250514",
-        "claude-sonnet-4.5": "claude-sonnet-4-5-20250514",
-        "claude-haiku-4.5": "claude-haiku-4-5-20250514",
+        # Claude 4.5 series (latest)
+        "claude-opus-4.5": "claude-opus-4-5-20251101",
+        "claude-sonnet-4.5": "claude-sonnet-4-5-20250929",
+        "claude-haiku-4.5": "claude-haiku-4-5-20250929",
+        # Claude 4 series (May 2025)
+        "claude-opus-4": "claude-opus-4-20250514",
+        "claude-sonnet-4": "claude-sonnet-4-20250514",
+        # Aliases (auto-updated to latest)
+        "claude-opus-4-5-latest": "claude-opus-4-5-20251101",
+        "claude-sonnet-4-5-latest": "claude-sonnet-4-5-20250929",
         # Direct model IDs also work
-        "claude-opus-4-5-20250514": "claude-opus-4-5-20250514",
-        "claude-sonnet-4-5-20250514": "claude-sonnet-4-5-20250514",
-        "claude-haiku-4-5-20250514": "claude-haiku-4-5-20250514",
-        # Legacy models
+        "claude-opus-4-5-20251101": "claude-opus-4-5-20251101",
+        "claude-sonnet-4-5-20250929": "claude-sonnet-4-5-20250929",
+        "claude-opus-4-20250514": "claude-opus-4-20250514",
+        "claude-sonnet-4-20250514": "claude-sonnet-4-20250514",
+        # Legacy models (deprecated - check status before using)
         "claude-3.5-sonnet": "claude-3-5-sonnet-20241022",
         "claude-3.5-haiku": "claude-3-5-haiku-20241022",
     }

@@ -92,10 +92,10 @@ API_KEY_ENV_VARS = {
 
 # Default models per provider
 DEFAULT_MODELS = {
-    "anthropic": "claude-sonnet-4-5-20250514",
-    "openai": "gpt-4o",
-    "google": "gemini-2.0-flash",
-    "grok": "grok-3",
+    "anthropic": "claude-sonnet-4.5",  # Maps to claude-sonnet-4-5-20250929
+    "openai": "gpt-4.1",               # Latest GPT model with 1M context
+    "google": "gemini-2.5-flash",      # Current stable Gemini
+    "grok": "grok-4",                  # Latest Grok model
 }
 
 
